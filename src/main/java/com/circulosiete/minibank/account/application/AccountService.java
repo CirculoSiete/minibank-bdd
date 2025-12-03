@@ -1,10 +1,10 @@
 package com.circulosiete.minibank.account.application;
 
+import com.circulosiete.minibank.account.api.CreateAccountRequest;
 import com.circulosiete.minibank.account.domain.Account;
 import com.circulosiete.minibank.account.domain.AccountFactory;
 import com.circulosiete.minibank.account.domain.Money;
 import com.circulosiete.minibank.account.infrastructure.AccountRepository;
-import java.math.BigDecimal;
 import java.util.UUID;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -37,7 +37,7 @@ public class AccountService {
         return accountRepository.findByOwnerId(ownerId, pageable);
     }
 
-   public Account deposit(UUID accountId, Money amount) {
+    public Account deposit(UUID accountId, Money amount) {
         Account account = getAccount(accountId);
         account.deposit(amount);
         return accountRepository.save(account);
@@ -58,6 +58,16 @@ public class AccountService {
     public Account closeAccount(UUID accountId) {
         Account account = getAccount(accountId);
         account.close();
+        return accountRepository.save(account);
+    }
+
+    @Transactional
+    public Account createAccount(CreateAccountRequest request) {
+        final var account = openAccount(
+            request.ownerId(),
+            request.currency()
+        );
+
         return accountRepository.save(account);
     }
 }

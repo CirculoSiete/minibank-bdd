@@ -22,4 +22,14 @@ public class AccountMapper {
     public static Money toMoney(String currency, BigDecimal amount) {
         return new Money(currency, amount);
     }
+
+    public static AccountResponse toResponse(Account account) {
+        return new AccountResponse(
+            account.getId(),
+            account.getOwnerId(),
+            account.getStatus().name(),
+            account.getBalance().getCurrency(),
+            account.getBalance().getAmount()
+        );
+    }
 }
