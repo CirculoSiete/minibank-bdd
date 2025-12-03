@@ -1,7 +1,8 @@
-package com.circulosiete.minibank.bdd;
+package com.circulosiete.minibank.bdd.steps;
 
 import com.circulosiete.minibank.account.api.CreateAccountRequest;
 import com.circulosiete.minibank.account.api.TransactionAccountRequest;
+import com.circulosiete.minibank.bdd.state.AccountState;
 import com.fasterxml.uuid.Generators;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

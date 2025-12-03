@@ -1,14 +1,11 @@
-package com.circulosiete.minibank.bdd;
+package com.circulosiete.minibank.bdd.steps;
 
-import codes.domix.fun.Result;
-import com.circulosiete.minibank.account.api.ApiError;
 import com.circulosiete.minibank.account.api.CreateAccountRequest;
 import com.circulosiete.minibank.account.api.TransactionAccountRequest;
 import com.circulosiete.minibank.account.api.TransferRequest;
-import com.circulosiete.minibank.account.api.TransferResponse;
+import com.circulosiete.minibank.bdd.state.TransferState;
 import com.fasterxml.uuid.Generators;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

@@ -1,4 +1,4 @@
-package com.circulosiete.minibank.bdd;
+package com.circulosiete.minibank.bdd.state;
 
 import codes.domix.fun.Result;
 import com.circulosiete.minibank.account.api.AccountResponse;
