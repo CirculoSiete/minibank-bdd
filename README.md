@@ -1,5 +1,12 @@
 # minibank-bdd
 
+Este repositorio muestra como implementar BDD con Cucumber en una aplicación de Spring Boot.
+
+## Requisitos
+
+1. Java 25 (Requerido)
+2. Gradle 9 (Opcional, ya que el proyecto usa Gradle Wrapper)
+
 
 ```gherkin
 Feature: Cuenta simple de Minibank
