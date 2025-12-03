@@ -2,6 +2,8 @@
 
 Este repositorio muestra como implementar BDD con Cucumber en una aplicación de Spring Boot.
 
+Puedes ver la presentación completa [aquí](https://docs.google.com/presentation/d/1Y5qdIdzdrZi-DNvp2WAScNHdMmD8iGm681oxLMkPrzw/edit?usp=sharing).
+
 ## Requisitos
 
 1. Java 25 (Requerido)
