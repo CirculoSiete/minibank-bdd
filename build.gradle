@@ -48,6 +48,9 @@ dependencies {
 	testImplementation 'org.testcontainers:testcontainers-junit-jupiter'
 	testImplementation 'org.testcontainers:testcontainers-postgresql'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // custom
+    implementation 'com.fasterxml.uuid:java-uuid-generator:4.3.0'
 }
 
 dependencyManagement {
