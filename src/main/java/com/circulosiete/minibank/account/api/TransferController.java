@@ -21,7 +21,6 @@ public class TransferController {
     public ResponseEntity<TransferResponse> transfer(
         @RequestBody TransferRequest request
     ) {
-        IO.println("transfering");
         transferService.transfer(
             request.fromAccountId(),
             request.toAccountId(),

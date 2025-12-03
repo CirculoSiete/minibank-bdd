@@ -72,7 +72,7 @@ public class TransferControllerIntegrationTest {
 
         // --- Ejecutar la llamada ---
         mockMvc.perform(
-                post("/api/v1/transfers")
+                post("/v1/transfers")
                     .contentType(MediaType.APPLICATION_JSON)
                     .content(json)
             )
