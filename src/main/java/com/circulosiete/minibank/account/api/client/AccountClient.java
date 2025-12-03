@@ -1,10 +1,10 @@
 package com.circulosiete.minibank.account.api.client;
 
 import codes.domix.fun.Result;
-import com.circulosiete.minibank.account.api.AccountResponse;
-import com.circulosiete.minibank.account.api.ApiError;
-import com.circulosiete.minibank.account.api.CreateAccountRequest;
-import com.circulosiete.minibank.account.api.TransactionAccountRequest;
+import com.circulosiete.minibank.account.api.dto.AccountResponse;
+import com.circulosiete.minibank.account.api.dto.ApiError;
+import com.circulosiete.minibank.account.api.dto.CreateAccountRequest;
+import com.circulosiete.minibank.account.api.dto.TransactionAccountRequest;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpMethod;

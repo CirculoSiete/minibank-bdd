@@ -1,5 +1,7 @@
-package com.circulosiete.minibank.account.api;
+package com.circulosiete.minibank.account.api.controller;
 
+import com.circulosiete.minibank.account.api.dto.TransferRequest;
+import com.circulosiete.minibank.account.api.dto.TransferResponse;
 import com.circulosiete.minibank.account.application.TransferService;
 import com.circulosiete.minibank.account.domain.Money;
 import lombok.RequiredArgsConstructor;

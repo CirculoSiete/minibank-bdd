@@ -1,6 +1,7 @@
 package com.circulosiete.minibank.account.api;
 
 import com.circulosiete.minibank.TestcontainersConfiguration;
+import com.circulosiete.minibank.account.api.dto.TransferRequest;
 import com.circulosiete.minibank.account.application.AccountService;
 import com.circulosiete.minibank.account.domain.Account;
 import com.circulosiete.minibank.account.domain.Money;

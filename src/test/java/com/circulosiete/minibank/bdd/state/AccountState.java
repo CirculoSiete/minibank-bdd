@@ -1,8 +1,8 @@
 package com.circulosiete.minibank.bdd.state;
 
 import codes.domix.fun.Result;
-import com.circulosiete.minibank.account.api.AccountResponse;
-import com.circulosiete.minibank.account.api.ApiError;
+import com.circulosiete.minibank.account.api.dto.AccountResponse;
+import com.circulosiete.minibank.account.api.dto.ApiError;
 import com.circulosiete.minibank.account.api.client.AccountClient;
 import io.cucumber.spring.ScenarioScope;
 import org.springframework.boot.test.web.server.LocalServerPort;

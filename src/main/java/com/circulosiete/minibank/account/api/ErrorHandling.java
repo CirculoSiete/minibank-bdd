@@ -1,5 +1,6 @@
 package com.circulosiete.minibank.account.api;
 
+import com.circulosiete.minibank.account.api.dto.ApiError;
 import com.circulosiete.minibank.account.domain.InsufficientBalanceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

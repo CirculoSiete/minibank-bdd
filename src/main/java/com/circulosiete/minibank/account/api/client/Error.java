@@ -1,9 +1,9 @@
 package com.circulosiete.minibank.account.api.client;
 
 import codes.domix.fun.Result;
-import com.circulosiete.minibank.account.api.AccountResponse;
-import com.circulosiete.minibank.account.api.ApiError;
-import com.circulosiete.minibank.account.api.TransferResponse;
+import com.circulosiete.minibank.account.api.dto.AccountResponse;
+import com.circulosiete.minibank.account.api.dto.ApiError;
+import com.circulosiete.minibank.account.api.dto.TransferResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.SneakyThrows;

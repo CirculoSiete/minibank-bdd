@@ -1,4 +1,4 @@
-package com.circulosiete.minibank.account.api;
+package com.circulosiete.minibank.account.api.dto;
 
 import java.math.BigDecimal;
 import java.util.UUID;

@@ -1,5 +1,9 @@
-package com.circulosiete.minibank.account.api;
+package com.circulosiete.minibank.account.api.controller;
 
+import com.circulosiete.minibank.account.api.dto.AccountMapper;
+import com.circulosiete.minibank.account.api.dto.AccountResponse;
+import com.circulosiete.minibank.account.api.dto.CreateAccountRequest;
+import com.circulosiete.minibank.account.api.dto.TransactionAccountRequest;
 import com.circulosiete.minibank.account.application.AccountService;
 import com.circulosiete.minibank.account.domain.Money;
 import java.util.UUID;

@@ -1,6 +1,6 @@
 package com.circulosiete.minibank.account.application;
 
-import com.circulosiete.minibank.account.api.CreateAccountRequest;
+import com.circulosiete.minibank.account.api.dto.CreateAccountRequest;
 import com.circulosiete.minibank.account.domain.Account;
 import com.circulosiete.minibank.account.domain.AccountFactory;
 import com.circulosiete.minibank.account.domain.Money;

@@ -1,4 +1,4 @@
-package com.circulosiete.minibank.account.api;
+package com.circulosiete.minibank.account.api.dto;
 
 import com.circulosiete.minibank.account.domain.AccountStatus;
 import java.math.BigDecimal;

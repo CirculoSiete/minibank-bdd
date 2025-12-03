@@ -1,8 +1,8 @@
 package com.circulosiete.minibank.bdd.steps;
 
-import com.circulosiete.minibank.account.api.CreateAccountRequest;
-import com.circulosiete.minibank.account.api.TransactionAccountRequest;
-import com.circulosiete.minibank.account.api.TransferRequest;
+import com.circulosiete.minibank.account.api.dto.CreateAccountRequest;
+import com.circulosiete.minibank.account.api.dto.TransactionAccountRequest;
+import com.circulosiete.minibank.account.api.dto.TransferRequest;
 import com.circulosiete.minibank.bdd.state.TransferState;
 import com.fasterxml.uuid.Generators;
 import io.cucumber.datatable.DataTable;

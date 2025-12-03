@@ -1,9 +1,9 @@
 package com.circulosiete.minibank.account.api.client;
 
 import codes.domix.fun.Result;
-import com.circulosiete.minibank.account.api.ApiError;
-import com.circulosiete.minibank.account.api.TransferRequest;
-import com.circulosiete.minibank.account.api.TransferResponse;
+import com.circulosiete.minibank.account.api.dto.ApiError;
+import com.circulosiete.minibank.account.api.dto.TransferRequest;
+import com.circulosiete.minibank.account.api.dto.TransferResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.client.RestClient;
 
