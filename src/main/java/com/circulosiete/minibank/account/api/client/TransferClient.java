@@ -10,20 +10,18 @@ import org.springframework.web.client.RestClient;
 @RequiredArgsConstructor
 public class TransferClient {
     private final RestClient restClient;
-    private final Error error = new Error();
+    private final HttpClientUtil httpClientUtil = new HttpClientUtil();
 
     public Result<TransferResponse, ApiError> transfer(TransferRequest request) {
-        try {
-            return Result.ok(
+        return httpClientUtil.invokes(
+            () ->
                 restClient
                     .post()
                     .uri("/v1/transfers")
                     .body(request)
                     .retrieve()
                     .body(TransferResponse.class)
-            );
-        } catch (Throwable ex) {
-            return error.getTransferError(ex);
-        }
+
+        );
     }
 }

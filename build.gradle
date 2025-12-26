@@ -54,7 +54,7 @@ dependencies {
     // custom
     implementation 'com.fasterxml.uuid:java-uuid-generator:4.3.0'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
-    implementation("codes.domix:fun:0.0.2")
+    implementation("codes.domix:fun:0.0.4")
 
     testImplementation('org.junit.platform:junit-platform-suite:6.0.1')
 

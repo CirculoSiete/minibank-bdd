@@ -1,14 +1,14 @@
 package com.circulosiete.minibank.account.api.client;
 
-import codes.domix.fun.Result;
-import com.circulosiete.minibank.account.api.dto.AccountResponse;
+import codes.domix.fun.Try;
 import com.circulosiete.minibank.account.api.dto.ApiError;
-import com.circulosiete.minibank.account.api.dto.TransferResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import lombok.SneakyThrows;
+import java.time.OffsetDateTime;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.client.HttpClientErrorException;
 
+@Slf4j
 public class Error {
     private final ObjectMapper objectMapper;
 
@@ -17,29 +17,27 @@ public class Error {
         this.objectMapper.registerModule(new JavaTimeModule());
     }
 
-    @SneakyThrows
-    public Result<AccountResponse, ApiError> getErrorResult(Exception ex) {
+    public ApiError getApiError(Throwable ex) {
         if (ex instanceof HttpClientErrorException httpEx && httpEx.getStatusCode().is4xxClientError()) {
-            return Result.err(
-                objectMapper.readValue(
-                    httpEx.getResponseBodyAsString(),
-                    ApiError.class
-                )
-            );
+            return getApiError(httpEx.getResponseBodyAsString());
         }
-        throw new RuntimeException(ex);
+        log.error("Unknow error", ex);
+        return new ApiError(
+            "UNKNOW", "Unknow error", ex.getMessage(), OffsetDateTime.now()
+        );
     }
 
-    @SneakyThrows
-    public Result<TransferResponse, ApiError> getTransferError(Throwable ex) {
-        if (ex instanceof HttpClientErrorException httpEx && httpEx.getStatusCode().is4xxClientError()) {
-            return Result.err(
-                objectMapper.readValue(
-                    httpEx.getResponseBodyAsString(),
-                    ApiError.class
+    public ApiError getApiError(String body) {
+        return Try
+            .of(() -> objectMapper.readValue(body, ApiError.class))
+            .onFailure(ex -> log.error("Error parsing ApiError from body", ex))
+            .getOrElseGet(
+                () -> new ApiError(
+                    "UNKNOW",
+                    "Unknow error",
+                    body,
+                    OffsetDateTime.now()
                 )
             );
-        }
-        throw new RuntimeException(ex);
     }
 }
